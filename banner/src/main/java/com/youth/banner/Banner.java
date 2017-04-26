@@ -452,7 +452,6 @@ public class Banner extends FrameLayout implements OnPageChangeListener {
         public void run() {
             if (count > 1 && isAutoPlay) {
                 currentItem = currentItem % (count + 1) + 1;
-//                Log.i(tag, "curr:" + currentItem + " count:" + count);
                 if (currentItem == 1) {
                     viewPager.setCurrentItem(currentItem, false);
                     handler.post(task);
@@ -466,7 +465,6 @@ public class Banner extends FrameLayout implements OnPageChangeListener {
 
     @Override
     public boolean dispatchTouchEvent(MotionEvent ev) {
-//        Log.i(tag, ev.getAction() + "--" + isAutoPlay);
         if (isAutoPlay) {
             int action = ev.getAction();
             if (action == MotionEvent.ACTION_UP || action == MotionEvent.ACTION_CANCEL
